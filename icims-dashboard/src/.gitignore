@@ -1,0 +1,14 @@
+.vscode/
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/settings.json
+
+coverage/
+node_modules/
+dist/
+docs/
+
+*.log
+*.tsbuildinfo
+
+.npmrc

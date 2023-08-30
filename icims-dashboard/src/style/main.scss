@@ -1,0 +1,198 @@
+@mixin addFlex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .row{
+    @include addFlex;
+  }
+  @mixin Shadow {
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+  }
+  .table-head{
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .green-Color{
+    color: #39835A;
+  }
+  .mainContainer {
+    padding: 20px;
+    text-align: left;
+    @include addFlex;
+    color: #959595;
+    font-size: 13px;
+    
+    .leftContainer {
+      width: 67%;
+  
+      .left-wrapper{
+        background-color: #fff;
+        border: 1px solid #f0f3f3;
+        @include Shadow;
+        .wrapperContainer {
+          padding: 15px;
+        
+          .top-section{
+            display: flex;
+            justify-content: space-between;
+    
+            fieldset{
+              width:120px;
+              display: inline;
+      
+              select{ width: 90%;}
+            }
+      
+            ul{
+              list-style: none;
+              padding: 0;
+              
+              li{
+                display: inline-block;
+                color: #0340CE;
+                border: 1px solid #E7E7E7;
+                padding: 5px 10px;
+                text-transform: uppercase;
+                cursor: pointer;
+                border-right: none;
+      
+                &:last-child{
+                  border-right: 1px solid #E7E7E7;
+                }
+              }
+            }
+          }
+    
+          .actions{
+            text-align: right;
+            color: #0340CE;
+            text-transform: uppercase;
+            margin: 15px 0 10px 0;
+    
+            span{
+              padding-left: 20px;
+            }
+          }
+    
+          table{
+            width: 100%;
+            border-collapse: collapse;
+            border-top: 2px solid #F2F2F2;
+            
+            
+            thead{
+              tr{
+                border-bottom: 1px solid #F2F2F2;
+                th{
+                  padding: 6px 0;
+                }
+              }
+            }
+            tbody{
+              tr{
+                td{
+                  padding: 5px 0;
+                  border-bottom: 1px solid #F2F2F2;
+                }
+              }
+            }
+          }
+        }
+        nav{
+          text-align: right;
+          ul.pagination{
+            list-style: none;
+            li{
+              display: inline-block;
+              padding:10px;
+              cursor: pointer;
+              border-right: 1px solid #959797;
+  
+              &:first-child{
+                cursor: default;
+                border-right: none
+              }
+              &:last-child {
+                border-right: none
+              }
+            }
+          }
+        }
+        
+      }
+      
+    }
+  
+    .rightContainer {
+      width: 30%;
+  
+      .box{
+        background-color: #fff;
+        padding: 15px;
+        @include Shadow;
+        margin-bottom: 15px;
+  
+        .row{
+          margin-bottom: 15px;
+          &>div{
+            &:last-child{
+                color: #0340CE;
+            }
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+  
+        &.sentiment{
+          .row{
+            &>div{
+              &:last-child{
+                @extend .green-Color
+              }
+            }
+          }
+          .table{
+            display: table;
+            width: 100%;
+            .horzontical{
+              width: 100%;
+              display: table-row;
+              &>div{
+                display: table-cell;
+                span{
+                  display: block;
+    
+                  &.line{
+                    height: 8px;
+                    width: 100%;
+                    margin: 8px 0;
+                    &.green{
+                      background-color:#39835A
+                    }
+                    &.red{
+                      background-color:#C4513C
+                    }
+                    &.yellow{
+                      background-color:#F6C344
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .dough-chart{
+            margin: 0 auto;
+  
+            
+          }
+        }
+      }
+    }
+  
+    
+  }
+  
+  
