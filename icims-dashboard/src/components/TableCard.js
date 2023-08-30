@@ -2,6 +2,8 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSuitcase } from "@fortawesome/free-solid-svg-icons";
 const TableCard = ({ table, tabs }) => {
+  console.log("table ",table)
+  console.log("tabs ",tabs)
   return (
     <>
       <div className="wrapperContainer">

@@ -21,6 +21,7 @@ const mainData = [
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const posts = tableData;
+  console.log("posts ",posts)
   const postsPerPage = 5;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -38,7 +39,7 @@ export default function App() {
         <div className="leftContainer">
           <div className="table-head">Cases Summary</div>
           <div className="left-wrapper">
-            {/* <TableCard table={currentPosts} tabs={tabs} /> */}
+            <TableCard table={currentPosts} tabs={tabs} />
             <Pagination
               perPage={postsPerPage}
               currentPage={currentPage}
