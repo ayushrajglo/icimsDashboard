@@ -20,13 +20,24 @@ const mainData = [
 ];
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [resolution, setResolution] = useState("");
   const posts = tableData;
-  console.log("posts ",posts)
   const postsPerPage = 5;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const handleResolution = (caseID) => {
+    fetch(
+      "http://localhost:8000/tableData")
+                  .then((res) => res.json())
+                  .then((json) => {
+                    let data= json.filter(function(i) {
+                      return i.caseNo === caseID;
+                    })
+                    setResolution((data[0].description))
+                  })
+  };
   return (
     <div className="App">
       <Header />
@@ -39,7 +50,7 @@ export default function App() {
         <div className="leftContainer">
           <div className="table-head">Cases Summary</div>
           <div className="left-wrapper">
-            <TableCard table={currentPosts} tabs={tabs} />
+            <TableCard table={currentPosts} tabs={tabs} onClick={handleResolution} />
             <Pagination
               perPage={postsPerPage}
               currentPage={currentPage}
@@ -50,10 +61,10 @@ export default function App() {
           </div>
         </div>
         <div className="rightContainer">
-          <div className="table-head">Intelligence</div>
+          <div className="table-head">Suggested Resolution</div>
+          <ChartCard table={tableData}  resolution={resolution} />
           <IntentCard />
           <SentimentCard table={tableData} />
-          <ChartCard table={tableData} />
         </div>
       </div>
     </div>

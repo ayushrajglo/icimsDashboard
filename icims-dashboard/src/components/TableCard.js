@@ -1,9 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSuitcase } from "@fortawesome/free-solid-svg-icons";
-const TableCard = ({ table, tabs }) => {
-  console.log("table ",table)
-  console.log("tabs ",tabs)
+const TableCard = ({ table, tabs, onClick }) => {
   return (
     <>
       <div className="wrapperContainer">
@@ -42,7 +40,6 @@ const TableCard = ({ table, tabs }) => {
                     <input type="checkbox" />
                   </th>
                   <th>Case No.</th>
-                  <th>Contact Name</th>
                   <th>Subject</th>
                   <th>Status</th>
                   <th>Priority</th>
@@ -53,12 +50,11 @@ const TableCard = ({ table, tabs }) => {
               <tbody>
                 {table.map((item) => {
                   return (
-                    <tr >
+                    <tr onClick={()=>onClick(item.caseNo)}>
                       <td>
                         <input type="checkbox" />
                       </td>
                       <td >{item.caseNo}</td>
-                      <td>{item.name}</td>
                       <td>{item.subject}</td>
                       <td>{item.status}</td>
                       <td>{item.priority}</td>
