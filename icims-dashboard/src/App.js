@@ -21,32 +21,38 @@ const mainData = [
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [resolution, setResolution] = useState("");
+  const [loader, setLoader] = useState(false)
   const posts = tableData;
-  const postsPerPage = 5;
+  const [postsPerPage, setPostsPerPage] = useState(5);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const handleResolution = (subject,elem) => {
-    var formdata = new FormData();
-    // setLoader(true);
-    let activeClass = document.getElementsByTagName('td')
+  
+
+  const handleResolution = async (subject,elem) => {
+    let formdata = new FormData();
+     setLoader(true);
+    let activeClass = document.querySelectorAll('table tr td')
     for (let i = 0; i < activeClass.length; i++) {
       activeClass[i].classList.remove('active')
     }
     elem.target.classList.add('active');
-formdata.append("search", `give me the resolution on how to ${subject}`);
+    formdata.append("search", `give me the resolution on how to ${subject}`);
 
-var requestOptions = {
-  method: 'POST',
-  body: formdata,
-  redirect: 'follow'
-};
+    let requestOptions = {
+      method: 'POST',
+      body: formdata,
+      redirect: 'follow'
+    };
 
-fetch("http://127.0.0.1:2002/query", requestOptions)
-  .then(response => response.json())
-  .then(result => setResolution(result.message))
-  .catch(error => console.log('error', error));
+    await fetch("http://127.0.0.1:2002/query", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        setLoader(false);
+        setResolution(result.message)
+      })
+      .catch(error => console.log('error', error));
     
   };
   return (
@@ -73,7 +79,7 @@ fetch("http://127.0.0.1:2002/query", requestOptions)
         </div>
         <div className="rightContainer">
           <div className="table-head">Suggested Resolution</div>
-          <ChartCard table={tableData}  resolution={resolution} />
+          <ChartCard table={tableData}  resolution={resolution} loader={loader} />
           <IntentCard />
           <SentimentCard table={tableData} />
         </div>

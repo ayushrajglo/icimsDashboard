@@ -73,7 +73,7 @@ import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 //   );
 // };
 
-const ChartCard = ({ table, resolution  }) => {
+const ChartCard = ({ resolution, loader  }) => {
   // const getData = () => {
   //   const data = [];
   //   const unique = [...new Set(table.map((item) => item.priority))];
@@ -124,7 +124,7 @@ const ChartCard = ({ table, resolution  }) => {
           />
         </PieChart>
       </div> */}
-      {resolution == "" ? "Please select subject to see the Resolution" : result() }
+      {resolution == "" && loader === false ? "Please select subject to see the Resolution" : loader ? "Loading..." : result() }
     </div>
   );
 };
