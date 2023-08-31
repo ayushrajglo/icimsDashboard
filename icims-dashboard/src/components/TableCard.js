@@ -2,10 +2,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSuitcase } from "@fortawesome/free-solid-svg-icons";
 const TableCard = ({ table, tabs, onClick }) => {
-  let activeClass = document.querySelectorAll('table tr td')
-    for (let i = 0; i < activeClass.length; i++) {
-      activeClass[i].classList.remove('active')
-    }
+
   return (
     <>
       <div className="wrapperContainer">

@@ -73,7 +73,7 @@ import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 //   );
 // };
 
-const ChartCard = ({ resolution, loader, caseID  }) => {
+const ChartCard = ({ resolution, loader, caseID, caseIDLoader  }) => {
   // const getData = () => {
   //   const data = [];
   //   const unique = [...new Set(table.map((item) => item.priority))];
@@ -101,7 +101,7 @@ const ChartCard = ({ resolution, loader, caseID  }) => {
     let data = resolution.split('\n')
     return(
       <>
-      <div>Reference Case ID - <a href="javascript:void(0)">{caseID}</a></div>
+      <div>Reference Case ID -{ caseIDLoader ? "----": <a href="javascript:void(0)">{caseID.replace(/\D/g, '')}</a>} </div>
       <ul>
         {data.map((item)=><li>{item}</li>)}
       </ul>

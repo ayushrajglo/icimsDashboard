@@ -23,6 +23,7 @@ export default function App() {
   const [resolution, setResolution] = useState("");
   const [caseID, setCaseID]= useState("")
   const [loader, setLoader] = useState(false)
+  const [caseIDLoader, setCaseIDLoader] = useState(false)
   const posts = tableData;
   const [postsPerPage, setPostsPerPage] = useState(5);
   const indexOfLastPost = currentPage * postsPerPage;
@@ -35,7 +36,7 @@ export default function App() {
     let formdata = new FormData();
     let formdataCaseID = new FormData();
     setLoader(true);
-
+    setCaseIDLoader(true)
     let activeClass = document.querySelectorAll('table tr td')
     for (let i = 0; i < activeClass.length; i++) {
       activeClass[i].classList.remove('active')
@@ -69,6 +70,7 @@ export default function App() {
     try{
       let caseResponse = await fetch("http://127.0.0.1:2002/query", requestOptionsCaseID)
       let caseResponseJson= await caseResponse.json()
+      setCaseIDLoader(false)
       setCaseID(caseResponseJson.message)
       //console.log("caseResponseJson.message=> ",caseResponseJson.message)
       }
@@ -100,7 +102,7 @@ export default function App() {
         </div>
         <div className="rightContainer">
           <div className="table-head">Suggested Resolution</div>
-          <ChartCard table={tableData}  resolution={resolution} loader={loader} caseID={caseID} />
+          <ChartCard table={tableData}  resolution={resolution} loader={loader} caseID={caseID} caseIDLoader={caseIDLoader} />
           <IntentCard />
           <SentimentCard table={tableData} />
         </div>
