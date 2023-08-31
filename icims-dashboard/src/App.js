@@ -21,6 +21,7 @@ const mainData = [
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [resolution, setResolution] = useState("");
+  const [caseID, setCaseID]= useState("")
   const [loader, setLoader] = useState(false)
   const posts = tableData;
   const [postsPerPage, setPostsPerPage] = useState(5);
@@ -32,28 +33,48 @@ export default function App() {
 
   const handleResolution = async (subject,elem) => {
     let formdata = new FormData();
-     setLoader(true);
+    let formdataCaseID = new FormData();
+    setLoader(true);
+
     let activeClass = document.querySelectorAll('table tr td')
     for (let i = 0; i < activeClass.length; i++) {
       activeClass[i].classList.remove('active')
     }
     elem.target.classList.add('active');
-    formdata.append("search", `give me the resolution on how to ${subject}`);
 
+    formdata.append("search", `give me the resolution on how to ${subject}`);
     let requestOptions = {
       method: 'POST',
       body: formdata,
       redirect: 'follow'
     };
 
-    await fetch("http://127.0.0.1:2002/query", requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        setLoader(false);
-        setResolution(result.message)
-      })
-      .catch(error => console.log('error', error));
-    
+    try{
+    let resolutionResponse = await fetch("http://127.0.0.1:2002/query", requestOptions)
+    let resolutionResponseJson = await resolutionResponse.json()
+    setLoader(false);
+    setResolution(resolutionResponseJson.message)
+    }
+    catch(err){
+      console.log("err =>",err)
+    }
+
+    formdataCaseID.append("search", `give me the caseid on how to ${subject}`);
+    let requestOptionsCaseID = {
+      method: 'POST',
+      body: formdataCaseID,
+      redirect: 'follow'
+    };
+
+    try{
+      let caseResponse = await fetch("http://127.0.0.1:2002/query", requestOptionsCaseID)
+      let caseResponseJson= await caseResponse.json()
+      setCaseID(caseResponseJson.message)
+      //console.log("caseResponseJson.message=> ",caseResponseJson.message)
+      }
+      catch(err){
+        console.log("erro=> ",err)
+      }
   };
   return (
     <div className="App">
@@ -79,7 +100,7 @@ export default function App() {
         </div>
         <div className="rightContainer">
           <div className="table-head">Suggested Resolution</div>
-          <ChartCard table={tableData}  resolution={resolution} loader={loader} />
+          <ChartCard table={tableData}  resolution={resolution} loader={loader} caseID={caseID} />
           <IntentCard />
           <SentimentCard table={tableData} />
         </div>
