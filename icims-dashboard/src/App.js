@@ -27,8 +27,14 @@ export default function App() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const handleResolution = (subject) => {
+  const handleResolution = (subject,elem) => {
     var formdata = new FormData();
+    // setLoader(true);
+    let activeClass = document.getElementsByTagName('td')
+    for (let i = 0; i < activeClass.length; i++) {
+      activeClass[i].classList.remove('active')
+    }
+    elem.target.classList.add('active');
 formdata.append("search", `give me the resolution on how to ${subject}`);
 
 var requestOptions = {

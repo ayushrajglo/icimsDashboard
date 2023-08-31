@@ -55,7 +55,7 @@ const TableCard = ({ table, tabs, onClick }) => {
                         <input type="checkbox" />
                       </td>
                       <td >{item.caseNo}</td>
-                      <td onClick={()=>onClick(item.subject)}>{item.subject}</td>
+                      <td onClick={(elem)=>onClick(item.subject,elem)}>{item.subject}</td>
                       <td>{item.status}</td>
                       <td>{item.priority}</td>
                       <td>{item.datetime}</td>
