@@ -93,13 +93,19 @@
             }
             tbody{
               tr{
-                cursor: pointer;
-                &:hover{
-                  background-color: #E7E7E7;
-                }
+                
                 td{
                   padding: 5px 0;
                   border-bottom: 1px solid #F2F2F2;
+                  
+                  &:nth-child(3){
+                    cursor: pointer;
+                    color: #0340CE;
+                  &:hover{
+                  background-color: #E7E7E7;
+                }
+                  }
+                  
                 }
               }
             }
@@ -152,6 +158,15 @@
         }
   
         &.sentiment{
+          ul{
+            list-style: none;
+            li{
+            padding: 5px 0;
+            &:nth-child(1){
+            font-weight: bold;
+            }
+            }
+            }
           .row{
             &>div{
               &:last-child{

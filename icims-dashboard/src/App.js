@@ -27,16 +27,21 @@ export default function App() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const handleResolution = (caseID) => {
-    fetch(
-      "http://localhost:8000/tableData")
-                  .then((res) => res.json())
-                  .then((json) => {
-                    let data= json.filter(function(i) {
-                      return i.caseNo === caseID;
-                    })
-                    setResolution((data[0].description))
-                  })
+  const handleResolution = (subject) => {
+    var formdata = new FormData();
+formdata.append("search", `give me the resolution on how to ${subject}`);
+
+var requestOptions = {
+  method: 'POST',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://127.0.0.1:2002/query", requestOptions)
+  .then(response => response.json())
+  .then(result => setResolution(result.message))
+  .catch(error => console.log('error', error));
+    
   };
   return (
     <div className="App">

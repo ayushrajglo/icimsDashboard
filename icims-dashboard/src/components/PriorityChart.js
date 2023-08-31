@@ -97,22 +97,17 @@ const ChartCard = ({ table, resolution  }) => {
   //   },
   //   [setActiveIndex]
   // );
-  // const result=()=>{
-  //   return(
-  //     <ul>
-  //       {resolution.map((item)=><li>{item}</li>)}
-  //     </ul>
-  //   )
-  // }
+  const result=()=>{
+    let data = resolution.split('\n')
+    return(
+      <ul>
+        {data.map((item)=><li>{item}</li>)}
+      </ul>
+    )
+  }
   return (
     <div className="box sentiment">
-      <div style={{ marginBottom: "15px" }}>
-        <FontAwesomeIcon
-          icon={faCircleNotch}
-          style={{ color: "#000", marginRight: "5px" }}
-        />
-        <b>Open cases by priority</b>
-      </div>
+
       {/* <div className="dough-chart">
         <PieChart width={250} height={200}>
           <Pie
@@ -129,7 +124,7 @@ const ChartCard = ({ table, resolution  }) => {
           />
         </PieChart>
       </div> */}
-      {resolution == "" ? "Please select case id to see the Resolution" : resolution }
+      {resolution == "" ? "Please select subject to see the Resolution" : result() }
     </div>
   );
 };
