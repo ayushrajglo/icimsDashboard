@@ -110,7 +110,7 @@ export default function App() {
           <div className="table-head">Suggested Resolution</div>
           <ChartCard table={tableData}  resolution={resolution} loader={loader} caseID={caseID} caseIDLoader={caseIDLoader} />
           <IntentCard />
-          <SentimentCard sentiment={sentiment} />
+          <SentimentCard sentiment={sentiment} loader={loader} />
         </div>
       </div>
     </div>
