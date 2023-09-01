@@ -15,7 +15,7 @@ const SentimentCard = ({ sentiment }) => {
         <div>Positive</div>
       </div>
       <div className="table">
-      <div className="horzontical" style={{display: sentiment ==""? 'none' : 'block'}}>
+      <div className="horzontical" style={{display: sentiment ==""? 'none' : 'table-row'}}>
           <div style={{ width: sentiment.positive+'%', display: sentiment.positive== 0 ? 'none': '' }}>
             <span className="line green"></span>
             <span>{sentiment.positive}%</span>
