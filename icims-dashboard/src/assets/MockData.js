@@ -7,8 +7,8 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:70,
-      neagative:5,
+      positive:60,
+      neagative:15,
       neutral: 25
     }
   },
@@ -33,8 +33,8 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:80,
-      neagative:5,
+      positive:70,
+      neagative:15,
       neutral: 15
     }
   },
@@ -60,8 +60,8 @@ export const tableData = [
     case: "Core",
     sentiment: {
       positive:70,
-      neagative:5,
-      neutral: 25
+      neagative:15,
+      neutral: 15
     }
   },
   {
@@ -73,7 +73,7 @@ export const tableData = [
     case: "Core",
     sentiment: {
       positive:50,
-      neagative:10,
+      neagative:40,
       neutral: 10
     }
   },
@@ -86,8 +86,8 @@ export const tableData = [
     case: "Core",
     sentiment: {
       positive:65,
-      neagative:5,
-      neutral: 30
+      neagative:15,
+      neutral: 20
     }
   },
   {
@@ -111,8 +111,8 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:80,
-      neagative:5,
+      positive:70,
+      neagative:15,
       neutral: 15
     }
   },
@@ -124,9 +124,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:95,
+      positive:90,
       neagative:0,
-      neutral: 5
+      neutral: 10
     }
   },
   {
@@ -137,8 +137,8 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:80,
-      neagative:5,
+      positive:70,
+      neagative:15,
       neutral: 15
     }
   },
@@ -150,9 +150,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:80,
+      positive:60,
       neagative:15,
-      neutral: 5
+      neutral: 25
     }
   },
   {
@@ -164,8 +164,8 @@ export const tableData = [
     case: "Core",
     sentiment: {
       positive:70,
-      neagative:5,
-      neutral: 25
+      neagative:15,
+      neutral: 15
     }
   },
   {
@@ -176,9 +176,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:90,
-      neagative:5,
-      neutral: 5
+      positive:60,
+      neagative:15,
+      neutral: 25
     }
   },
   {
@@ -202,9 +202,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:90,
-      neagative:5,
-      neutral: 5
+      positive:70,
+      neagative:15,
+      neutral: 15
     }
   },
   {
@@ -215,9 +215,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:80,
-      neagative:15,
-      neutral: 5
+      positive:20,
+      neagative:60,
+      neutral: 20
     }
   },
   {
@@ -228,8 +228,8 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:90,
-      neagative:10,
+      positive:80,
+      neagative:20,
       neutral: 0
     }
   },
@@ -241,9 +241,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:70,
-      neagative:5,
-      neutral: 25
+      positive:40,
+      neagative:30,
+      neutral: 30
     }
   },
   {
@@ -254,9 +254,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:80,
-      neagative:10,
-      neutral: 10
+      positive:70,
+      neagative:15,
+      neutral: 15
     }
   },
   {
@@ -267,9 +267,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:90,
-      neagative:5,
-      neutral: 5
+      positive:60,
+      neagative:15,
+      neutral: 25
     }
   },
   {
@@ -281,8 +281,8 @@ export const tableData = [
     case: "Core",
     sentiment: {
       positive:70,
-      neagative:5,
-      neutral: 25
+      neagative:15,
+      neutral: 15
     }
   },
   {
@@ -306,9 +306,9 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:90,
-      neagative:5,
-      neutral: 5
+      positive:60,
+      neagative:20,
+      neutral: 20
     }
   },
   {
@@ -320,8 +320,8 @@ export const tableData = [
     case: "Core",
     sentiment: {
       positive:70,
-      neagative:5,
-      neutral: 25
+      neagative:15,
+      neutral: 15
     }
   }
 ];
