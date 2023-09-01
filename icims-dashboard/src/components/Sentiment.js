@@ -12,7 +12,7 @@ const SentimentCard = ({ sentiment }) => {
           />
           <b>Sentiment Analysis</b>
         </div>
-        <div>Positive</div>
+        <div></div>
       </div>
       <div className="table">
       <div className="horzontical" style={{display: sentiment ==""? 'none' : 'table-row'}}>

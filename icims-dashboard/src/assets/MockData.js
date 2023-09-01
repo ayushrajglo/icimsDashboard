@@ -202,8 +202,8 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:70,
-      neagative:15,
+      positive:15,
+      neagative:70,
       neutral: 15
     }
   },
@@ -228,7 +228,7 @@ export const tableData = [
     datetime: "09/17/2022 02:00 AM",
     case: "Core",
     sentiment: {
-      positive:80,
+      positive:15,
       neagative:20,
       neutral: 0
     }
