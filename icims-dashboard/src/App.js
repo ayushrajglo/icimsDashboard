@@ -30,18 +30,20 @@ export default function App() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  
+  const [activeClass, setActiveClass]=useState("")
 
-  const handleResolution = async (subject,elem) => {
+  const handleResolution = async (subject,caseID) => {
     let formdata = new FormData();
     let formdataCaseID = new FormData();
+    let temp_resolution = [];
     setLoader(true);
     setCaseIDLoader(true)
-    let activeClass = document.querySelectorAll('table tr td')
-    for (let i = 0; i < activeClass.length; i++) {
-      activeClass[i].classList.remove('active')
-    }
-    elem.target.classList.add('active');
+    setActiveClass(caseID)
+    // let activeClass = document.querySelectorAll('table tr td')
+    // for (let i = 0; i < activeClass.length; i++) {
+    //   activeClass[i].classList.remove('active')
+    // }
+    // elem.target.classList.add('active');
 
     formdata.append("search", `give me the resolution on how to ${subject}`);
     let requestOptions = {
@@ -53,8 +55,9 @@ export default function App() {
     try{
     let resolutionResponse = await fetch("http://127.0.0.1:2002/query", requestOptions)
     let resolutionResponseJson = await resolutionResponse.json()
-    setLoader(false);
-    setResolution(resolutionResponseJson.message)
+    // setLoader(false);
+    temp_resolution = resolutionResponseJson.message;
+    // setResolution(resolutionResponseJson.message)
     }
     catch(err){
       console.log("err =>",err)
@@ -71,7 +74,9 @@ export default function App() {
       let caseResponse = await fetch("http://127.0.0.1:2002/query", requestOptionsCaseID)
       let caseResponseJson= await caseResponse.json()
       setCaseIDLoader(false)
+      setLoader(false);
       setCaseID(caseResponseJson.message)
+      setResolution(temp_resolution)
       //console.log("caseResponseJson.message=> ",caseResponseJson.message)
       }
       catch(err){
@@ -90,7 +95,7 @@ export default function App() {
         <div className="leftContainer">
           <div className="table-head">Cases Summary</div>
           <div className="left-wrapper">
-            <TableCard table={currentPosts} tabs={tabs} onClick={handleResolution} />
+          <TableCard table={currentPosts} tabs={tabs} onClick={handleResolution} activeClass={activeClass}/>
             <Pagination
               perPage={postsPerPage}
               currentPage={currentPage}

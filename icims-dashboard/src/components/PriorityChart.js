@@ -99,9 +99,10 @@ const ChartCard = ({ resolution, loader, caseID, caseIDLoader  }) => {
   // );
   const result=()=>{
     let data = resolution.split('\n')
+    let caseid = caseID.split(' ')
     return(
       <>
-      <div>Reference Case ID -{ caseIDLoader ? "----": <a href="javascript:void(0)">{caseID.replace(/\D/g, '')}</a>} </div>
+      <div>Reference Case ID -{ caseIDLoader ? "----": <a href="javascript:void(0)">{caseid[caseid.length-1]}</a>} </div>
       <ul>
         {data.map((item)=><li>{item}</li>)}
       </ul>
@@ -127,7 +128,7 @@ const ChartCard = ({ resolution, loader, caseID, caseIDLoader  }) => {
           />
         </PieChart>
       </div> */}
-      {resolution == "" && loader === false ? "Please select subject to see the Resolution" : loader ? "Loading..." : result() }
+      {resolution == "" && loader === false ? "Please select subject to see the Resolution" : loader ? <div className="laoding"><div className="loader"></div>Getting resolution</div> : result() }
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSuitcase } from "@fortawesome/free-solid-svg-icons";
-const TableCard = ({ table, tabs, onClick }) => {
+const TableCard = ({ table, tabs, onClick, activeClass }) => {
 
   return (
     <>
@@ -48,9 +48,9 @@ const TableCard = ({ table, tabs, onClick }) => {
               <tbody>
                 {table.map((item) => {
                   return (
-                    <tr >
+                    <tr className={activeClass == item.caseNo ? 'active' : ""}>
                       <td >{item.caseNo}</td>
-                      <td onClick={(elem)=>onClick(item.subject,elem)}>{item.subject}</td>
+                      <td onClick={()=>onClick(item.subject,item.caseNo)}>{item.subject}</td>
                       <td>{item.status}</td>
                       <td>{item.priority}</td>
                       <td>{item.datetime}</td>

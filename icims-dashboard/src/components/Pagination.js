@@ -8,10 +8,7 @@ const Pagination = ({
   paginate
 }) => {
   const pageNumbers = [];
-  let activeClass = document.querySelectorAll('table tr td')
-    for (let i = 0; i < activeClass.length; i++) {
-      activeClass[i].classList.remove('active')
-    }
+  
   for (let i = 1; i < Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
   }
