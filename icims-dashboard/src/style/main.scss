@@ -239,6 +239,48 @@
   
             
           }
+          .green{
+            span{
+              width: 20px;
+              height: 20px;
+              background-color: #39835A;
+              display: inline-block;
+              margin: 5px 5px 5px 0;
+            }
+            p{
+              display: inline-block;
+              margin: 0;
+              vertical-align: super;
+            }
+          }
+          .red{
+            span{
+              width: 20px;
+              height: 20px;
+              background-color: #C4513C;
+              display: inline-block;
+              margin: 5px 5px 5px 0;
+            }
+            p{
+              display: inline-block;
+              margin: 0;
+              vertical-align: super;
+            }
+          }
+          .yellow{
+            span{
+              width: 20px;
+              height: 20px;
+              background-color: #F6C344;
+              display: inline-block;
+              margin: 5px 5px 5px 0;
+            }
+            p{
+              display: inline-block;
+              margin: 0;
+              vertical-align: super;
+            }
+          }
         }
       }
     }

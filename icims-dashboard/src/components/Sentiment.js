@@ -16,22 +16,29 @@ const SentimentCard = ({ sentiment }) => {
       </div>
       <div className="table">
       <div className="horzontical">
-          <div style={{ width: sentiment.positive+'%' }}>
-            <span>POSITIVE</span>
+          <div style={{ width: sentiment.positive+'%', display: sentiment.positive== 0 ? 'none': '' }}>
             <span className="line green"></span>
             <span>{sentiment.positive}%</span>
           </div>
-          <div style={{ width: sentiment.neagative }}>
-            <span>NEUTRAL</span>
+          <div style={{ width: sentiment.neagative+'%', display: sentiment.neagative== 0 ? 'none': '' }}>
             <span className="line yellow"></span>
             <span>{sentiment.neagative}%</span>
           </div>
-          <div style={{ width: sentiment.neutral+'%' }}>
-            <span>NEGATIVE</span>
+          <div style={{ width: sentiment.neutral+'%', display: sentiment.neutral== 0 ? 'none': '' }}>
             <span className="line red"></span>
             <span>{sentiment.neutral}%</span>
           </div>
         </div>
+      </div>
+      <div className="green">
+        <span></span>
+        <p>POSITIVE</p>
+      </div>
+      <div className="yellow">
+        <span></span><p>NEUTRAL</p>
+      </div>
+      <div className="red">
+        <span></span><p>NEGATIVE</p>
       </div>
     </div>
   );
