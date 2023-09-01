@@ -31,6 +31,7 @@ export default function App() {
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [activeClass, setActiveClass]=useState("")
+  const [sentiment, setSentiment] = useState("")
 
   const handleResolution = async (subject,caseID) => {
     let formdata = new FormData();
@@ -95,7 +96,7 @@ export default function App() {
         <div className="leftContainer">
           <div className="table-head">Cases Summary</div>
           <div className="left-wrapper">
-          <TableCard table={currentPosts} tabs={tabs} onClick={handleResolution} activeClass={activeClass}/>
+          <TableCard table={currentPosts} tabs={tabs} onClick={handleResolution} activeClass={activeClass} setSentiment={setSentiment}/>
             <Pagination
               perPage={postsPerPage}
               currentPage={currentPage}
@@ -109,7 +110,7 @@ export default function App() {
           <div className="table-head">Suggested Resolution</div>
           <ChartCard table={tableData}  resolution={resolution} loader={loader} caseID={caseID} caseIDLoader={caseIDLoader} />
           <IntentCard />
-          <SentimentCard table={tableData} />
+          <SentimentCard sentiment={sentiment} />
         </div>
       </div>
     </div>

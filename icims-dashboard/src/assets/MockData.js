@@ -5,7 +5,12 @@ export const tableData = [
     status: "New",
     priority: "Low",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:70,
+      neagative:5,
+      neutral: 25
+    }
   },
   {
     caseNo: "01067028",
@@ -13,7 +18,12 @@ export const tableData = [
     status: "New",
     priority: "Low",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:60,
+      neagative:10,
+      neutral: 30
+    }
   },
   {
     caseNo: "01054739",
@@ -21,7 +31,12 @@ export const tableData = [
     status: "New",
     priority: "Low",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:80,
+      neagative:5,
+      neutral: 15
+    }
   },
   {
     caseNo: "01069361",
@@ -29,7 +44,12 @@ export const tableData = [
     status: "New",
     priority: "High",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:90,
+      neagative:0,
+      neutral: 10
+    }
   },
   {
     caseNo: "01062166",
@@ -37,7 +57,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:70,
+      neagative:5,
+      neutral: 25
+    }
   },
   {
     caseNo: "01068041",
@@ -45,7 +70,12 @@ export const tableData = [
     status: "New",
     priority: "Low",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:50,
+      neagative:10,
+      neutral: 10
+    }
   },
   {
     caseNo: "01061390",
@@ -53,7 +83,12 @@ export const tableData = [
     status: "New",
     priority: "High",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:65,
+      neagative:5,
+      neutral: 30
+    }
   },
   {
     caseNo: "01067494",
@@ -61,7 +96,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:50,
+      neagative:25,
+      neutral: 25
+    }
   },
   {
     caseNo: "01068296",
@@ -69,7 +109,12 @@ export const tableData = [
     status: "New",
     priority: "Low",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:80,
+      neagative:5,
+      neutral: 15
+    }
   },
   {
     caseNo: "01068154",
@@ -77,7 +122,12 @@ export const tableData = [
     status: "New",
     priority: "High",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:95,
+      neagative:0,
+      neutral: 5
+    }
   },
   {
     caseNo: "01065635",
@@ -85,7 +135,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:80,
+      neagative:5,
+      neutral: 15
+    }
   },
   {
     caseNo: "01067933",
@@ -93,7 +148,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:80,
+      neagative:15,
+      neutral: 5
+    }
   },
   {
     caseNo: "01064495",
@@ -101,7 +161,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:70,
+      neagative:5,
+      neutral: 25
+    }
   },
   {
     caseNo: "01053377",
@@ -109,7 +174,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:90,
+      neagative:5,
+      neutral: 5
+    }
   },
   {
     caseNo: "01061149",
@@ -117,7 +187,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:100,
+      neagative:0,
+      neutral: 0
+    }
   },
   {
     caseNo: "1067513",
@@ -125,7 +200,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:90,
+      neagative:5,
+      neutral: 5
+    }
   },
   {
     caseNo: "1066954",
@@ -133,7 +213,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:80,
+      neagative:15,
+      neutral: 5
+    }
   },
   {
     caseNo: "1068720",
@@ -141,7 +226,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:90,
+      neagative:10,
+      neutral: 0
+    }
   },
   {
     caseNo: "1066919",
@@ -149,7 +239,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:70,
+      neagative:5,
+      neutral: 25
+    }
   },
   {
     caseNo: "1053587",
@@ -157,7 +252,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:80,
+      neagative:10,
+      neutral: 10
+    }
   },
   {
     caseNo: "1060429",
@@ -165,7 +265,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:90,
+      neagative:5,
+      neutral: 5
+    }
   },
   {
     caseNo: "1062689",
@@ -173,7 +278,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:70,
+      neagative:5,
+      neutral: 25
+    }
   },
   {
     caseNo: "1070223",
@@ -181,7 +291,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:50,
+      neagative:25,
+      neutral: 25
+    }
   },
   {
     caseNo: "1064081",
@@ -189,7 +304,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:90,
+      neagative:5,
+      neutral: 5
+    }
   },
   {
     caseNo: "1059044",
@@ -197,7 +317,12 @@ export const tableData = [
     status: "New",
     priority: "Neutral",
     datetime: "09/17/2022 02:00 AM",
-    case: "Core"
+    case: "Core",
+    sentiment: {
+      positive:70,
+      neagative:5,
+      neutral: 25
+    }
   }
 ];
 
