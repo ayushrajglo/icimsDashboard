@@ -34,55 +34,18 @@ export default function App() {
   const [sentiment, setSentiment] = useState("")
 
   const handleResolution = async (subject,caseID) => {
-    let formdata = new FormData();
-    let formdataCaseID = new FormData();
-    let temp_resolution = [];
     setLoader(true);
     setCaseIDLoader(true)
     setActiveClass(caseID)
-    // let activeClass = document.querySelectorAll('table tr td')
-    // for (let i = 0; i < activeClass.length; i++) {
-    //   activeClass[i].classList.remove('active')
-    // }
-    // elem.target.classList.add('active');
+    
+    const result= tableData.filter((item)=>item.subject == subject)
 
-    formdata.append("search", `give me the resolution on how to ${subject}`);
-    let requestOptions = {
-      method: 'POST',
-      body: formdata,
-      redirect: 'follow'
-    };
-
-    try{
-    let resolutionResponse = await fetch("http://127.0.0.1:2002/query", requestOptions)
-    let resolutionResponseJson = await resolutionResponse.json()
-    // setLoader(false);
-    temp_resolution = resolutionResponseJson.message;
-    // setResolution(resolutionResponseJson.message)
-    }
-    catch(err){
-      console.log("err =>",err)
-    }
-
-    formdataCaseID.append("search", `give me the caseid on how to ${subject}`);
-    let requestOptionsCaseID = {
-      method: 'POST',
-      body: formdataCaseID,
-      redirect: 'follow'
-    };
-
-    try{
-      let caseResponse = await fetch("http://127.0.0.1:2002/query", requestOptionsCaseID)
-      let caseResponseJson= await caseResponse.json()
+    setTimeout(function () {
       setCaseIDLoader(false)
       setLoader(false);
-      setCaseID(caseResponseJson.message)
-      setResolution(temp_resolution)
-      //console.log("caseResponseJson.message=> ",caseResponseJson.message)
-      }
-      catch(err){
-        console.log("erro=> ",err)
-      }
+      setCaseID(caseID)
+      setResolution(result[0].description)
+  }, Math.floor(Math.random() * 4000));
   };
   return (
     <div className="App">

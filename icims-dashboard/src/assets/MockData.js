@@ -10,7 +10,8 @@ export const tableData = [
       positive:60,
       neagative:15,
       neutral: 25
-    }
+    },
+    description: "To upload an i9 form, follow these steps:\n\n1. Login into your platform.\n2. Select Library.\n3. Select the Task dropdown.\n4. Create a Task Library.\n5. Select the name.\n6. Select Association as Onboarding Workflow.\n7. Select Assignee type.\n8. Select Category.\n9. Select the Task type as \"Form\".\n10. Select the required iForm.\n\nThis will allow you to upload the i9 form."
   },
   {
     caseNo: "01067028",
@@ -23,7 +24,8 @@ export const tableData = [
       positive:60,
       neagative:10,
       neutral: 30
-    }
+    },
+    description:"Hello, recently when reviewing a new hires onboard status verse their completed iforms there is a discrepancy. All tasks appear as complete, however, when trying to view/download the form it does not appear in the iform dropdown."
   },
   {
     caseNo: "01054739",
@@ -49,7 +51,8 @@ export const tableData = [
       positive:90,
       neagative:0,
       neutral: 10
-    }
+    },
+    description:"Can this iForm be created in the onboarding portal to be added as a task?"
   },
   {
     caseNo: "01062166",
@@ -62,7 +65,8 @@ export const tableData = [
       positive:70,
       neagative:15,
       neutral: 15
-    }
+    },
+    description:"Please upload the new I9 form attached and create as a task. Thank you!"
   },
   {
     caseNo: "01068041",
@@ -75,7 +79,8 @@ export const tableData = [
       positive:50,
       neagative:40,
       neutral: 10
-    }
+    },
+    description:"Hi - Need this new task with this attached document and a signature box and date stamped. Thank You"
   },
   {
     caseNo: "01061390",
@@ -88,7 +93,8 @@ export const tableData = [
       positive:65,
       neagative:15,
       neutral: 20
-    }
+    },
+    description:"We would like to add the the AT: Voluntary Self-ID Of Disability (post-offer) iForm to the onboarding documents"
   },
   {
     caseNo: "01067494",
@@ -101,7 +107,8 @@ export const tableData = [
       positive:50,
       neagative:25,
       neutral: 25
-    }
+    },
+    description:"The home page and the 'join our team' page on our website to include the Best Workplaces logo. Can you please updated the join our team page to reflect the best way to inform them of the change. I've included a screenshot of the original banner and a screenshot of the updated banner."
   },
   {
     caseNo: "01068296",
@@ -114,7 +121,8 @@ export const tableData = [
       positive:70,
       neagative:15,
       neutral: 15
-    }
+    },
+    description:"We would like to add the the AT: Voluntary Self-ID Of Disability (post-offer) iForm to the onboarding documents"
   },
   {
     caseNo: "01068154",
@@ -127,7 +135,8 @@ export const tableData = [
       positive:90,
       neagative:0,
       neutral: 10
-    }
+    },
+    description:"The home page and the 'join our team' page on our website to include the Best Workplaces logo. Can you please updated the join our team page to reflect the best way to inform them of the change. I've included a screenshot of the original banner and a screenshot of the updated banner."
   },
   {
     caseNo: "01065635",
@@ -140,7 +149,8 @@ export const tableData = [
       positive:70,
       neagative:15,
       neutral: 15
-    }
+    },
+    description:"Need to remove on the career site at the bottom of the page where it has Na ALi'ii EEO Policy and Nakupuna Solutions EEO Policy and replace it with Please view Nakupuna Companies EEO Policy : Click Here and connect with attachment of Nakupuna Companies EEO Policy"
   },
   {
     caseNo: "01067933",
@@ -153,7 +163,8 @@ export const tableData = [
       positive:60,
       neagative:15,
       neutral: 25
-    }
+    },
+    description:"Portal: https://careers-soltech.icims.com/ Branding URL: https://soltech.net/working-for-soltech/"
   },
   {
     caseNo: "01064495",
@@ -166,7 +177,8 @@ export const tableData = [
       positive:70,
       neagative:15,
       neutral: 15
-    }
+    },
+    description:"How to update the portals branding."
   },
   {
     caseNo: "01053377",
@@ -179,7 +191,8 @@ export const tableData = [
       positive:60,
       neagative:15,
       neutral: 25
-    }
+    },
+    description:"Hello- we need the banner changed to the attached. Please let me know if you need the links for 'who we are' , 'what we do' , 'investor protal'"
   },
   {
     caseNo: "01061149",
@@ -192,7 +205,8 @@ export const tableData = [
       positive:100,
       neagative:0,
       neutral: 0
-    }
+    },
+    description:"How to update the portals branding."
   },
   {
     caseNo: "1067513",
@@ -205,7 +219,8 @@ export const tableData = [
       positive:15,
       neagative:70,
       neutral: 15
-    }
+    },
+    description:"Portal: https://careers-soltech.icims.com/ Branding URL: https://soltech.net/working-for-soltech/"
   },
   {
     caseNo: "1066954",
@@ -218,7 +233,8 @@ export const tableData = [
       positive:20,
       neagative:60,
       neutral: 20
-    }
+    },
+    description:"Need to remove on the career site at the bottom of the page where it has Na ALi'ii EEO Policy and Nakupuna Solutions EEO Policy and replace it with Please view Nakupuna Companies EEO Policy : Click Here and connect with attachment of Nakupuna Companies EEO Policy"
   },
   {
     caseNo: "1068720",
@@ -231,7 +247,8 @@ export const tableData = [
       positive:15,
       neagative:20,
       neutral: 0
-    }
+    },
+    description:"We would like to add the the AT: Voluntary Self-ID Of Disability (post-offer) iForm to the onboarding documents"
   },
   {
     caseNo: "1066919",
@@ -244,7 +261,8 @@ export const tableData = [
       positive:40,
       neagative:30,
       neutral: 30
-    }
+    },
+    description:"Hi - Need this new task with this attached document and a signature box and date stamped. Thank You"
   },
   {
     caseNo: "1053587",
@@ -257,7 +275,8 @@ export const tableData = [
       positive:70,
       neagative:15,
       neutral: 15
-    }
+    },
+    description:"Please upload the new I9 form attached and create as a task. Thank you!"
   },
   {
     caseNo: "1060429",
@@ -270,7 +289,8 @@ export const tableData = [
       positive:60,
       neagative:15,
       neutral: 25
-    }
+    },
+    description:"Can this iForm be created in the onboarding portal to be added as a task?"
   },
   {
     caseNo: "1062689",
@@ -283,7 +303,8 @@ export const tableData = [
       positive:70,
       neagative:15,
       neutral: 15
-    }
+    },
+    description:"Hello, recently when reviewing a new hires onboard status verse their completed iforms there is a discrepancy. All tasks appear as complete, however, when trying to view/download the form it does not appear in the iform dropdown."
   },
   {
     caseNo: "1070223",
@@ -296,7 +317,8 @@ export const tableData = [
       positive:50,
       neagative:25,
       neutral: 25
-    }
+    },
+    description:"Can this iForm be created in the onboarding portal to be added as a task?"
   },
   {
     caseNo: "1064081",
@@ -309,7 +331,8 @@ export const tableData = [
       positive:60,
       neagative:20,
       neutral: 20
-    }
+    },
+    description:"Please upload the new I9 form attached and create as a task. Thank you!"
   },
   {
     caseNo: "1059044",
@@ -322,7 +345,8 @@ export const tableData = [
       positive:70,
       neagative:15,
       neutral: 15
-    }
+    },
+    description:"Hi - Need this new task with this attached document and a signature box and date stamped. Thank You"
   }
 ];
 
